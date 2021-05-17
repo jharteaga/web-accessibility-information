@@ -15,7 +15,6 @@
 }
 
 p {
-	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -131,8 +130,9 @@ h2 {
 
 h3 {
 	font-family: 'Alegreya Sans SC';
-	letter-spacing: 5px;
+	letter-spacing: 7px;
 	text-transform: uppercase;
+	font-size: 1.5rem;
 }
 
 /* ==============  TASK 4 =================*/
@@ -183,7 +183,7 @@ footer nav ul {
 }
 
 footer nav a {
-	color: indianred;
+	color: hotpink;
 	text-decoration: none;
 	text-align: center;
 }
@@ -193,7 +193,7 @@ footer nav a[href^='/terms/movement/'] {
 }
 
 footer nav li:last-of-type a {
-	color: lemonchiffon;
+	color: slateblue;
 }
 
 /* ==============  TASK 6 =================*/
@@ -206,7 +206,7 @@ footer nav li:last-of-type a {
 }
 
 /* ==============  TASK 7 =================*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 	section:nth-of-type(2) {
 		display: flex;
 		flex-direction: column;
@@ -231,6 +231,10 @@ footer nav li:last-of-type a {
 	header {
 		background-image: linear-gradient(90deg, black, black, #555 40%, black);
 		min-height: 100px;
+	}
+
+	h1 {
+		padding: 0 0.7em;
 	}
 
 	h1,
