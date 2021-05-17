@@ -238,6 +238,10 @@ footer nav li:last-of-type a {
 	h3 {
 		text-align: center;
 	}
+
+	h3 {
+		font-size: 1.7rem;
+	}
 }
 
 /* ==============  TASK 10 =================*/
