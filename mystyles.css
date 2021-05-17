@@ -1,6 +1,6 @@
 /* ==============  TASK 1 =================*/
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap');
 
 :root {
 	--web-accessibility: 'Nowadays the meaning of Web Accessibility in web design and development is very important which is related to create and build things such as websites, web applications, and mobile apps in a way that they are accessible for people regardless the disabilities they might have in order to make their work straightforward no matter which tool they are using. For instance the browser magnifier, a screen reader, or voice recognition. Therefore, Web Accessibility is priority and a must to take into account since the beginning of the project until its end.';
@@ -159,7 +159,7 @@ header nav a {
 }
 
 /* ==============  TASK 5 =================*/
-p:first-of-type::first-line {
+section:nth-of-type(1) p:first-of-type::first-line {
 	font-weight: bold;
 }
 
