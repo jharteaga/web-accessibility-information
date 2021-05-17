@@ -224,6 +224,12 @@ footer nav li:last-of-type a {
 	img.floatright {
 		margin-left: 0;
 	}
+
+	h1,
+	h2,
+	h3 {
+		text-align: center;
+	}
 }
 
 /* ==============  TASK 9 =================*/
@@ -235,12 +241,6 @@ footer nav li:last-of-type a {
 
 	h1 {
 		padding: 0 0.7em;
-	}
-
-	h1,
-	h2,
-	h3 {
-		text-align: center;
 	}
 
 	h3 {
