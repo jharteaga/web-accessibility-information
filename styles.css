@@ -1,0 +1,94 @@
+/*1. TYPOGRAPHY ================================ */
+
+/*2. LAYOUT BLOCKS===============================*/
+
+html {
+  font-size: 11px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+
+  color: white;
+  background-color: black;
+
+  background-image: url('images/keyboard-access.jpg'),
+    linear-gradient(90deg, black, black, #555 40%, black);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 200px;
+}
+
+main {
+  width: 96%;
+  margin: auto;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 1rem 2%;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer nav li {
+  display: block;
+}
+
+/*3. NAVIGATION =================================*/
+
+nav ul {
+  list-style-type: none; /*remove dots*/
+}
+
+nav li {
+  display: inline;
+}
+
+/*4. IMAGES =====================================*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.featured-image {
+  width: 60%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+
+/*4. UTILITY CLASSES ===============================*/
+
+.floatright {
+  float: right;
+  margin-left: 16px;
+}
+
+.floatleft {
+  float: left;
+  margin-right: 16px;
+}
+
+/*6. MEDIA QUERIES===============================*/
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 1rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: auto;
+  }
+}

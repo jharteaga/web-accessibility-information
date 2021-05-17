@@ -1,0 +1,256 @@
+/* ==============  TASK 1 =================*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&display=swap');
+
+:root {
+	--web-accessibility: 'Nowadays the meaning of Web Accessibility in web design and development is very important which is related to create and build things such as websites, web applications, and mobile apps in a way that they are accessible for people regardless the disabilities they might have in order to make their work straightforward no matter which tool they are using. For instance the browser magnifier, a screen reader, or voice recognition. Therefore, Web Accessibility is priority and a must to take into account since the beginning of the project until its end.';
+	--visual-design: 'Visual Design is really important in Web Accessibility because that is how every person perceives the information that we are sharing in our web or mobile applications. Visual Design takes into consideration three aspects, which are "Color", "Color Contrast", and "Animations".\A\A Color gives to the application status and it distingushes the product from another ones. Besides, Color is very important to transmit information and feelings. Nervertheless, there are people who have been diagnosed with color blind, so we have to take into consideration this disability to help them to get the information they need undependable of the colors used. Therefore, do not rely in color to convey details, and if there is a need to set color swatches, set aside the color name for accessibility compliance.\A\A Color contrast is really important as well to help people with vision disabilities to get the information that needs to be conveyed. Therefore it is important take into consideration the following good practices: use good color pairings (avoid complementary colors for back and foreground), the contrast for meaningful text, icons and graphics should have a minimum of ratio of 4.5:1, and lastly, every large or bold text should have a minimum ratio of 3:1.\A\A Last but not least, Animations are awesome however they should be used in a responsible way. In fact, animations can cause discomfort in some individuals with disabilities such as Autism. Therefore, we should provide a way to the user to turn animations off, build the application without relying in animations, always design stateful animations, if it\'s necessary to use an animation try to use a dissolve affect rather than a motion, and avoid content flashing.';
+	--keyboard-interface: 'In order to comply with Web Accessibility the design and built of the application should take into consideration the use of the keyboard to navigate and perform any action throughout the entire application without using a mouse. Therefore it is important to consider the following: The Tab key should be used to navigate through any element that requires interactivity with the user. Besides, the Tab key do not recognize <div> HTML tags, so buttons or any element that requires interactivity should not be design as a div element.\A\A In addition, it is necessary to review and test the navigation in the application with the Tab key, and try to go backwards in order to avoid any keyboard trap. Indeed, designers and developers should think in the flow of the content like what should go first, second, and what should be the end of the process.';
+	--touch-interface: 'First of all, it is good to understand that none of us are the same each other, in other words, everyone has unique physical characteristics, and regardless the tools that the user uses to interact with the application in a touch screen, they most be able to perform it. Therefore, it is very important to provide space among all the elements to let the user interact with the application more accurate regardles how they tap the screen. Besides, try to scale the elements up to ease its tap. In fact, industries have their own standard to scale their elements up. For instance Microsoft uses a 34x34 size, Apple uses a 44x44 size, and Google uses a 48x48 size.\A\A In addition, nowadays gestures are very common in applications, however designers and developers should think in people with disabilities as well, and try to make these gestures easy to perform and figure them out. Nevertheless, always we have always make sure to provide another way to perform the action without using the gesture.';
+	--image-and-media: "Every image and media that we add to our applications should have a purpose, and give a meaningful understanding of the message that we need to convey. Besides, it's important to understand that there are three types of media: Informational, Functional, and Decorative. As a matter of fact, the Informational and Functional require text-equivalent to provide more meaning for people who are impared. The way to identify if an element needs a text-equivalent is to consider what happen if that image or media is remove? does the content will be affected and become meaningless? if it does, it needs a text-equivalent, otherwise it doesn't need it.\A\A Text-equivalent is related to provide an alternate text in case the image or media is not being showed. For example, a text-equivalent for images is set by the attribute ALT of the <image> HTML tag. Another example, for labels related with a form field should have an attribute called 'aria-label'. Therefore, the best practice and meaningful way to set text-equivalent is by providing a text similar what is being shows in the interface.\A\A In case of a video or audio, take into account that there are users who are blind or deaf, and as a designers and developers we should think on them too. How are we going to provide them the same information that is being delivered by the media? Thus, it is important to provide a transcript of the audio for deaf people, and an audio description for blind people.";
+	--forms: 'There are some aspects that we need to consider in forms in order to comply with Web Accessibility. For example: Every form field needs a label. Nowadays it is very trendy the use of placeholders in the form fields to indicate what is being requested, however, these placeholders are gone once the user focus on the field or starts to type on it. In order to avoid this, let the placeholder persists and a technique could be to move it aside to the label; just if it is necessary. Another practice that designers and developers should take into consideration is to stablish the type of input field in order to provide the more accurate keyboard to the user.\A\A In addition, the user not always provide the correct information into the forms, therefore it is necessary to provide a consistent placement of the error icon throughout the entire form. Besides, each error message should be close to the form field which it is related to, the error messages should be written in plain language without technical vocabulary. Finally, each form field should have an attribute called "aria-describedby" which aims to describe to the user the purpose of the form field, and what is expected from him.';
+	--straw-test: 'The Straw Test is a technique to identify how a person with vision issues who needs to use a magnifier to read interact with the application. This technique consists in use a hand and form a fist with a very tiny hole inside the hand, simulating a very thin straw, and look through it the flow of the application. If there is a hard time navigating throughout the application, and some elements lose relation due to their distance, it is a good time to implement proximity in order to help this type of person with vision problems.';
+	--content-hierarchy: 'Content Hierarchy in Web Accessibility is related to provide to people, who used other tools to interact with the application such as screen readers, to be able to scan through the entire web site knowing the titles, subtitles, and all the information needed to quickly scan it. This best practice will allow impared people to know how much information is there, where exactly is the information he needs to get, and the time that can take him to read it. Therefore, take into consideration to write titles from the more specific to the most general.';
+	--accessible-design: 'According to all the information I have learned throughout the course, I will keep in mind working with relative units, and test my web sites resizing the text with the browser to know that the information is still providing meaning to the user. In addition, it is very important to implement text-equivalent to HTML elements such as images, and any type of media. Besides, nowadays web applications must provide responsiveness according to the size of the screen. Therefore, tables and form should be resize in a way that the information that I want to convey and get from the user still make sense and have meaning. Another tip that I would take to design forms is to take into consideration the use of the placeholder, and persist it next to the label. Last but not least, test my web applications not just to see how it looks, but how it works with the Tab key navigation and screen readers.';
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+/* ==============  TASK 2 =================*/
+/* Hide Paragraphs */
+section:first-child p,
+section:nth-of-type(2) h3:first-of-type ~ p:nth-of-type(1),
+section:nth-of-type(2) h3:nth-of-type(2) + p,
+section:nth-of-type(2) h3:nth-of-type(3) + p,
+section:nth-of-type(2) h3:nth-of-type(4) + p,
+section:nth-of-type(2) h3:nth-of-type(5) + img + p,
+section:nth-of-type(3) h2:first-of-type + p,
+section:nth-of-type(4) h2:first-of-type + p,
+section:nth-of-type(5) h2:first-of-type + p {
+	visibility: hidden;
+}
+
+/* Web Accessibility */
+section:first-child p:before {
+	content: var(--web-accessibility);
+	display: block;
+	visibility: visible;
+}
+
+/* Visual Design */
+/* The use of pre-wrap is to allow line-break using \A inside the String */
+section:nth-of-type(2) h3:first-of-type ~ p:nth-of-type(1):before {
+	content: var(--visual-design);
+	display: block;
+	visibility: visible;
+	white-space: pre-wrap;
+}
+
+/* Keyboard Interface */
+section:nth-of-type(2) h3:nth-of-type(2) + p:before {
+	content: var(--keyboard-interface);
+	display: block;
+	visibility: visible;
+	white-space: pre-wrap;
+}
+
+/* Touch Interface */
+section:nth-of-type(2) h3:nth-of-type(3) + p:before {
+	content: var(--touch-interface);
+	display: block;
+	visibility: visible;
+	white-space: pre-wrap;
+}
+
+/* Image and Media */
+section:nth-of-type(2) h3:nth-of-type(4) + p:before {
+	content: var(--image-and-media);
+	display: inline-block;
+	visibility: visible;
+	white-space: pre-line;
+}
+
+/* Forms */
+section:nth-of-type(2) h3:nth-of-type(5) + img + p:before {
+	content: var(--forms);
+	display: block;
+	visibility: visible;
+	white-space: pre-wrap;
+}
+
+/* Straw Test */
+section:nth-of-type(3) h2:first-of-type + p:before {
+	content: var(--straw-test);
+	display: block;
+	visibility: visible;
+	white-space: pre-wrap;
+}
+
+/* Content Hierarchy */
+section:nth-of-type(4) h2:first-of-type + p:before {
+	content: var(--content-hierarchy);
+	display: block;
+	visibility: visible;
+	white-space: pre-wrap;
+}
+
+/* Accesible Design */
+section:nth-of-type(5) h2:first-of-type + p:before {
+	content: var(--accessible-design);
+	display: block;
+	visibility: visible;
+	white-space: pre-wrap;
+}
+
+/* ==============  TASK 3 =================*/
+h1,
+h2,
+h3 {
+	font-family: 'Oswald', Arial, sans-serif;
+}
+
+header h1 {
+	font-size: 3.157rem;
+	color: #9af7c8;
+}
+
+header h1 > span {
+	color: #fabb7f;
+}
+
+main section:first-of-type h2 {
+	font-size: 6rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-family: 'Alegreya Sans SC';
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+/* ==============  TASK 4 =================*/
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header nav ul li {
+	padding: 0 1em;
+	border-right: 1px solid #fabb7f;
+}
+
+header nav ul li:last-child {
+	border: none;
+}
+
+header nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+/* ==============  TASK 5 =================*/
+p:first-of-type::first-line {
+	font-weight: bold;
+}
+
+section:first-child p:first-of-type::first-letter {
+	color: white;
+	background-color: black;
+	float: left;
+	font-size: 4.5rem;
+	line-height: 0.8em;
+	padding: 0.1em;
+	margin-right: 0.1em;
+}
+
+/* ==============  TASK 8 =================*/
+footer h4 {
+	color: white;
+}
+
+footer nav ul {
+	padding: 0;
+}
+
+footer nav a {
+	color: indianred;
+	text-decoration: none;
+	text-align: center;
+}
+
+footer nav a[href^='/terms/movement/'] {
+	color: deepskyblue;
+}
+
+footer nav li:last-of-type a {
+	color: lemonchiffon;
+}
+
+/* ==============  TASK 6 =================*/
+
+@media screen and (min-width: 1000px) {
+	section:nth-of-type(n + 2) > h2 + p {
+		font-size: 1.777rem;
+		font-style: italic;
+	}
+}
+
+/* ==============  TASK 7 =================*/
+@media screen and (max-width: 768px) {
+	section:nth-of-type(2) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	section:nth-of-type(2) p {
+		display: flex;
+		flex-direction: column;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	img.floatright {
+		margin-left: 0;
+	}
+}
+
+/* ==============  TASK 9 =================*/
+@media screen and (max-width: 600px) {
+	header {
+		background-image: linear-gradient(90deg, black, black, #555 40%, black);
+		min-height: 100px;
+	}
+
+	h1,
+	h2,
+	h3 {
+		text-align: center;
+	}
+}
+
+/* ==============  TASK 10 =================*/
+@media screen and (min-width: 1400px) {
+	header {
+		position: sticky;
+		top: 0;
+	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
